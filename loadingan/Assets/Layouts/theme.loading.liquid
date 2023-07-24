@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="stylesheet" href="{{ 'loading-animation.css' | asset_url }}">
+    {{ content_for_header }}
+  </head>
+  <body>
+    <!-- The overlay to blur the screen -->
+    <div id="overlay"></div>
+
+    <!-- The loading animation -->
+    <div id="loading-animation" class="cartoon hb">
+      <!-- Animation elements here -->
+      <div class="wing-bottom ha hb"></div>
+      <div class="wing-top ha hb">
+        <div class="dots r"></div>
+      </div>
+      <div class="wing-bottom ha hb"></div>
+      <div class="wing-top ha hb">
+        <div class="dots r"></div>
+      </div>
+      <div class="body r ha hb"></div>
+      <div class="antenna r ha hb"></div>
+    </div>
+
+    <!-- The rest of your content here -->
+
+    <script src="{{ 'loading-animation.js' | asset_url }}" defer></script>
+    {{ content_for_layout }}
+  </body>
+</html>
